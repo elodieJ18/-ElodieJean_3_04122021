@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/f2e513a052.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="oh-my-food.css" />
     <title>Document</title>
   </head>
   <body>
@@ -13,15 +15,16 @@
             <img src="#">
           </div>
         </div>
-        <div class="home-location">
-          <div class="icon-location"></div>
-          <a href="#">Paris, Belleville</a>
+        <div class="home-location"> 
+          <div class="btn-map"><button><a href="#"><i class="fas fa-map-marker-alt"></i></a></button></div>
+                    <label class="visually-hidden" for="name">Paris, France</label>
+                    <input class="input" placeholder="Paris, France" type="text" />
         </div>
         <div id="explore-restaurant">
           <h1>Réservez le menu qui vous convient</h1>
           <p>Découvrez des restaurant d'expection, séléctionnés par nos soins.</p>
           <div class="btn-explore-restaurant">
-            <input> </input>
+            <bouton>Explorer nos restaurants</bouton>
           </div>
         </div>
       </header>
@@ -31,32 +34,101 @@
         <h2>Fonctionnement</h2>
         <div class="how-it-works-element">
         <div class="how-it-works-first-content">
-          <span>1</span>
+          <span class="first-cirlce">1</span>
           <div class="how-it-works-first-element">
-            <div class="how-it-works-icon">
-              <i></i>
-            </div>
-          <input></input>
+            <bouton class="how-it-works-icon"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</bouton>
         </div></div>
         <div class="how-it-works-second-content">
-          <span>2</span>
+          <span class="second-cirlce">2</span>
           <div class="how-it-works-second-element">
-            <div class="how-it-works-icon">
-              <i></i>
+              <bouton class="how-it-works-icon"><i class="fas fa-list-ul"></i>Composez votre menu</bouton>
             </div>
-          <input></input>
-        </div>
         </div>
         <div class="how-it-works-content-third">
-          <span>3</span>
+          <span class="third-cirlce">3</span>
           <div class="how-it-works-third-element">
-            <div class="how-it-works-icon">
-              <i></i>
-            </div>
-          <input></input>
+            <bouton class="how-it-works-icon"><i class="fas fa-store"></i>Dégustez au restaurant</bouton>
+          </div>
         </div>
         </div>
       </div></div>
+    </section>
+    <section id="restaurants-choices">
+      <div class="restaurants-choices-container"> 
+        <div class="restaurants-choices-container-results"> 
+          <h3 class="restaurants-choices-title">Restaurants</h3> 
+          <div class="restaurants-choices-container-results-grid"> 
+           
+            <a class="restaurants-choices-container-results-grid--element" href="#"> 
+              <div class="restaurants-choices-container-results-grid--element---image-container"> 
+                <img class="restaurants-choices-container-results-grid--element---image" src="assets/Images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"> 
+              </div>
+              <div class="restaurants-choices-container-results-grid--element---description"> 
+                <div class="restaurants-choices-container-results-way"> 
+                  <div> 
+                  <h4>La palette du goût</h4>
+                <p>Ménilmontant</p>
+              </div>
+                <div class="starsrate">
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              </div>
+            </a>
+
+            <a class="restaurants-choices-container-results-grid--element" href="#"> 
+              <div class="restaurants-choices-container-results-grid--element---image-container"> 
+                <img class="restaurants-choices-container-results-grid--element---image" src="assets/Images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"> 
+              </div>
+              <div class="restaurants-choices-container-results-grid--element---description"> 
+                <div class="restaurants-choices-container-results-way"> 
+                  <div> 
+                  <h4>La note enchantée</h4>
+                <p>Charonne</p>
+              </div>
+                <div class="starsrate">
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              </div>
+            </a>
+            <a class="restaurants-choices-container-results-grid--element" href="#"> 
+              <div class="restaurants-choices-container-results-grid--element---image-container"> 
+                <img class="restaurants-choices-container-results-grid--element---image" src="assets/Images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"> 
+              </div>
+              <div class="restaurants-choices-container-results-grid--element---description"> 
+                <div class="restaurants-choices-container-results-way"> 
+                  <div> 
+                  <h4>À la française</h4>
+                <p>Cité Rouge</p>
+              </div>
+                <div class="starsrate">
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              </div>
+            </a>
+            <a class="restaurants-choices-container-results-grid--element" href="#"> 
+              <div class="restaurants-choices-container-results-grid--element---image-container"> 
+                <img class="restaurants-choices-container-results-grid--element---image" src="assets/Images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"> 
+              </div>
+              <div class="restaurants-choices-container-results-grid--element---description"> 
+                <div class="restaurants-choices-container-results-way"> 
+                  <div> 
+                  <h4>Le délice des sens</h4>
+                <p>Folie-Méricourt</p>
+              </div>
+                <div class="starsrate">
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              </div>
+            </a>
+    </section>
+    <section id="footer">
+<footer>
+  
+</footer>
     </section>
   </body>
 </html>

@@ -1,9 +1,123 @@
 /*home*/
 .home-location {
   display: flex;
+  background-color: gray;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
 }
 
 /*fonctionnement*/
+#how-it-works {
+  background-color: white;
+}
+
+.third-cirlce {
+  padding: 5px;
+  background-color: #9356dc;
+  color: white;
+}
+
 .how-it-works-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.how-it-works-first-element,
+.how-it-works-second-element,
+.how-it-works-third-element {
+  background-color: white;
+  box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+}
+
+.how-it-works-first-element:hover,
+.how-it-works-second-element:hover,
+.how-it-works-third-element:hover {
+  background-color: #9256dc0e;
+  box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+}
+
+.how-it-works-icon i {
+  color: gray;
+}
+
+.how-it-works-icon i:hover {
+  color: #9356dc;
+}
+
+.how-it-works-icon {
+  display: flex;
+}
+
+.how-it-works-content-third {
+  margin-bottom: 20px;
+}
+
+/*restaurant-choices*/
+
+.restaurants-choices-title {
+  margin: 0;
+  padding: 0 0 2rem 0;
+}
+/**/
+#restaurants-choices {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 2%;
+  gap: 34px;
+  margin-top: 38px;
+}
+
+.restaurants-choices-container-results-grid--element---description {
+  text-decoration: none;
+}
+
+.restaurants-choices-container-results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row: 2;
+  gap: 28px;
+}
+
+.restaurants-choices-container-results-grid--element {
+  display: grid;
+  grid-template-rows: 1fr;
+  border-radius: 1.2rem;
+  padding: 3px;
+  box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+  width: 93%;
+}
+
+.restaurants-choices-container-results-grid--element---image-container {
+  height: 113px;
+  overflow: hidden;
+}
+
+.restaurants-choices-container-results-grid--element---image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  text-align: center;
+}
+
+.restaurants-choices-container-results-grid--element---description {
+  margin-top: 10px;
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+/**/
+.restaurants-choices-container-results-way {
   display: flex;
 }
