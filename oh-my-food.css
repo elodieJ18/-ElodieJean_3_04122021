@@ -269,8 +269,40 @@ input:active {
   margin: 0;
 }
 
-.like:hover {
-  background: linear-gradient(180deg, #ff79da, #9356dc);
+button {
+  border: none;
+  background: none;
+}
+
+.like i.fas.fa-heart {
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.like i.fas.fa-heart:hover {
+  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: unset;
+  cursor: pointer;
+  padding: 0.1em;
+}
+
+.like i.fas.fa-heart:active {
+  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
+  -webkit-text-stroke-color: -webkit-linear-gradient(
+    bottom,
+    #ff79da,
+    #9356dc 1rem
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: unset;
+  cursor: pointer;
 }
 
 /*menu*/
@@ -281,7 +313,7 @@ input:active {
   margin-left: 6%;
 }
 
-#menu {
+#menu-française {
   background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -423,7 +455,19 @@ input:active {
   color: #ffff;
 }
 
+.footer-menu {
+  display: flex;
+}
+
+.footer-menu-icon {
+  color: #ffff;
+}
+
 .footer-menu a,
 .footer-mention {
   color: #ffff;
+}
+
+.footer-logo img {
+  background-color: white;
 }
