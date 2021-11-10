@@ -70,6 +70,19 @@ input:active {
   word-wrap: normal;
 }
 
+input {
+  border: none;
+}
+
+input::placeholder {
+  border: none;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
 /*explore*/
 
 #explore-restaurant {
