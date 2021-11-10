@@ -193,6 +193,20 @@ input:active {
 
 /*restaurant-choices*/
 
+.restaurants-nouveau span {
+  background-color: #99e2d0;
+  color: #048162;
+  position: relative;
+  bottom: 7rem;
+  left: 11.5rem;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 2px;
+}
+
 .restaurants-choices-title {
   margin: 0;
   padding: 0 0 2rem 0;
@@ -275,13 +289,15 @@ button {
 }
 
 .like i.fas.fa-heart {
-  -webkit-text-stroke: 2px;
+  font-size: 20px;
+  -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .like i.fas.fa-heart:hover {
+  font-size: 20px;
   background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
   background-clip: text;
   -webkit-background-clip: text;
@@ -331,7 +347,7 @@ button {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 0;
-  margin-top: 35px;
+  margin-top: 0;
 }
 
 .menu-like {
@@ -354,6 +370,7 @@ button {
   width: 87%;
   justify-content: space-between;
   margin-left: 4%;
+  padding-top: 10%;
 }
 
 .btn-menu {
@@ -448,26 +465,49 @@ button {
 /*footer*/
 
 #footer {
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(46, 46, 46);
 }
 
-.footer-logo {
-  color: #ffff;
+.footer-content a {
+  color: white;
+  font-size: 13px;
+}
+
+.footer-content {
+  padding-bottom: 20px;
+  padding-left: 2em;
+}
+
+.footer-logo img {
+  padding-top: 20px;
+  padding-bottom: 13px;
+  width: 30%;
+}
+
+.footer-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-mention {
+  padding-bottom: 2px;
 }
 
 .footer-menu {
   display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-bottom: 7px;
 }
 
 .footer-menu-icon {
   color: #ffff;
 }
+.footer-menu-icon i {
+  font-size: 13px;
+}
 
 .footer-menu a,
 .footer-mention {
   color: #ffff;
-}
-
-.footer-logo img {
-  background-color: white;
 }
