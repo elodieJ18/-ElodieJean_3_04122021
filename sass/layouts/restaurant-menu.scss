@@ -1,0 +1,140 @@
+/*menu*/
+.home-content {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-left: 6%;
+}
+
+#menu-française {
+  background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 55%;
+}
+
+.fond-ecran-content {
+  background-color: rgb(245, 244, 244);
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+}
+
+.fond-ecran-content h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.menu-like {
+  margin-top: 35px;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 244, 244);
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+  width: 87%;
+  justify-content: space-between;
+  margin-left: 4%;
+  padding-top: 10%;
+}
+
+.btn-menu {
+  border-radius: 1rem;
+  margin-top: 10px;
+}
+
+.menu-element {
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+  padding-bottom: 30px;
+}
+
+.menu-element h2 {
+  text-transform: capitalize;
+}
+
+.menu-element h3 {
+  font-weight: 100;
+  color: gray;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.menu-btn-element {
+  display: flex;
+  background-color: #ffff;
+  justify-content: space-between;
+  box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+}
+
+.menu-text {
+  display: flex;
+  align-items: flex-end;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.menu-price {
+  padding-bottom: 14px;
+  padding-right: 10px;
+  margin: 0;
+  font-size: 11px;
+}
+
+.menu-title-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-title-text h4 {
+  margin: 0;
+  font-size: 13px;
+  padding: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.menu-title-text p {
+  margin: 0;
+  padding-bottom: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 11px;
+}
+
+.menu-btn-valider i {
+  color: #ffff;
+  background-color: #99e2d0;
+  padding: 21px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.btn-commander {
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  border-radius: 1.5rem;
+  padding: 16px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+}
+
+.btn-commander a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 15px;
+}

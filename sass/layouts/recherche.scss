@@ -1,0 +1,56 @@
+.btn-map button {
+  border: none;
+  background-color: transparent;
+  color: gray;
+}
+
+.btn-map button a {
+  color: rgb(75, 75, 75);
+}
+
+input {
+  border: none;
+  background-color: rgb(233, 229, 229);
+  color: rgb(34, 34, 34);
+}
+
+input:active {
+  border: none;
+}
+
+#home-location {
+  box-shadow: 0px 3px 10px 0px rgb(211, 210, 210) inset;
+  background-color: rgb(233, 229, 229);
+}
+
+.home-location-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 65%;
+  margin-left: 25%;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+input {
+  border: none;
+}
+
+input::placeholder {
+  border: none;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}

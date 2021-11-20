@@ -1,0 +1,47 @@
+#footer {
+  background-color: rgb(46, 46, 46);
+}
+
+.footer-content a {
+  color: white;
+  font-size: 13px;
+}
+
+.footer-content {
+  padding-bottom: 20px;
+  padding-left: 2em;
+}
+
+.footer-logo img {
+  padding-top: 20px;
+  padding-bottom: 13px;
+  width: 30%;
+}
+
+.footer-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-mention {
+  padding-bottom: 2px;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-bottom: 7px;
+}
+
+.footer-menu-icon {
+  color: #ffff;
+}
+.footer-menu-icon i {
+  font-size: 13px;
+}
+
+.footer-menu a,
+.footer-mention {
+  color: #ffff;
+}

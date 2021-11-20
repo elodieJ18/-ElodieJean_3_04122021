@@ -1,0 +1,127 @@
+.restaurants-choices-container-results-grid--element---image-container span {
+  background-color: #99e2d0;
+  color: #048162;
+  position: relative;
+  bottom: 6.5rem;
+  left: 11.5rem;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 2px;
+}
+
+.restaurants-choices-title {
+  margin: 0;
+  padding: 0 0 2rem 0;
+}
+/**/
+#restaurants-choices {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 2%;
+  gap: 34px;
+  margin-top: 38px;
+  width: 95%;
+  margin-left: 15px;
+  margin-bottom: 35px;
+}
+
+.restaurants-choices-container-results-grid--element---description {
+  text-decoration: none;
+}
+
+.restaurants-choices-container-results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row: 2;
+  gap: 28px;
+}
+
+.restaurants-choices-container-results-grid a {
+  color: black;
+}
+
+.restaurants-choices-container-results-grid--element {
+  display: grid;
+  grid-template-rows: 1fr;
+  border-radius: 1.2rem;
+  padding: 3px;
+  box-shadow: 0px 3px 12px 0px rgb(196 196 196);
+  width: 93%;
+}
+
+.restaurants-choices-container-results-grid--element---image-container {
+  height: 113px;
+  overflow: hidden;
+}
+
+.restaurants-choices-container-results-grid--element---image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  text-align: center;
+}
+
+.restaurants-choices-container-results-grid--element---description {
+  margin-top: 10px;
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+/**/
+.restaurants-choices-container-results-way {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.restaurants-choices-container-results-way h4,
+.restaurants-choices-container-results-way p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.like i.fas.fa-heart {
+  font-size: 20px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.like i.fas.fa-heart:hover {
+  font-size: 20px;
+  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: unset;
+  cursor: pointer;
+  padding: 0.1em;
+}
+
+.like i.fas.fa-heart:active {
+  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
+  -webkit-text-stroke-color: -webkit-linear-gradient(
+    bottom,
+    #ff79da,
+    #9356dc 1rem
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: unset;
+  cursor: pointer;
+}
