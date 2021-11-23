@@ -1,10 +1,13 @@
+@import "../utils/mixin";
+@import "../utils/variables";
+
 #home-location {
-  @include back-shadow;
+  box-shadow: $back-shadow;
   background-color: $colour-block-one;
 }
 
 #explore-restaurant {
-  @include back-shadow;
+  box-shadow: $back-shadow;
 }
 
 .explore-restaurant-container {
@@ -21,7 +24,7 @@
 .btn-explore-restaurant {
   background: $colour-mixed;
   @include btn-form;
-  @include back-shadow;
+  box-shadow: $back-shadow;
   a {
     @include a-transform;
   }
@@ -39,7 +42,6 @@
 
 .how-it-works-btn-element {
   background-color: $colour-block-one;
-  @include back-shadow;
 }
 
 .restaurants-choices-container-results-grid--element---image-container span {

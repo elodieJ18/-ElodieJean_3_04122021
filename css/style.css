@@ -1,18 +1,70 @@
-/* Error: Undefined mixin.
- *   ,
- * 2 |   @include back-shadow;
- *   |   ^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\page\home.scss 2:3  @import
- *   sass\main.scss 1:9       root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502    @include back-shadow;\d\a   \2502    ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\page\\home.scss 2:3  @import\a   sass\\main.scss 1:9       root stylesheet";
+#home-location {
+  box-shadow: 3px 10px 0px;
+  background-color: #e9e5e5;
 }
+
+#explore-restaurant {
+  box-shadow: 3px 10px 0px;
+}
+
+.explore-restaurant-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.explore-restaurant-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 35px;
+}
+.explore-restaurant-container p {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-explore-restaurant {
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  border-radius: 1.5rem;
+  padding: 16px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  box-shadow: 3px 10px 0px;
+}
+.btn-explore-restaurant a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+/*fonctionnements*/
+.how-it-works-content h2 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 35px;
+}
+
+.how-it-works-circle {
+  background-color: #9356dc;
+}
+
+.how-it-works-btn-element {
+  background-color: #e9e5e5;
+}
+
+.restaurants-choices-container-results-grid--element---image-container span {
+  color: #048162;
+  background-color: #99e2d0;
+}
+
+#home-logo {
+  text-align: center;
+}
+#home-logo img {
+  width: 50%;
+  padding-bottom: 2px;
+  padding-top: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
