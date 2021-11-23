@@ -1,0 +1,48 @@
+#home-location {
+  @include back-shadow;
+  background-color: $colour-block-one;
+}
+
+#explore-restaurant {
+  @include back-shadow;
+}
+
+.explore-restaurant-container {
+  @include text-center-column;
+  h1 {
+    font-family: $font-txt;
+    @include font-one;
+  }
+  p {
+    font-family: $font-txt;
+  }
+}
+
+.btn-explore-restaurant {
+  background: $colour-mixed;
+  @include btn-form;
+  @include back-shadow;
+  a {
+    @include a-transform;
+  }
+}
+
+/*fonctionnements*/
+
+.how-it-works-content h2 {
+  @include font-one;
+}
+
+.how-it-works-circle {
+  background-color: $colour-dot;
+}
+
+.how-it-works-btn-element {
+  background-color: $colour-block-one;
+  @include back-shadow;
+}
+
+.restaurants-choices-container-results-grid--element---image-container span {
+  color: $colour-typo-new;
+  background-color: $colour-ticket-new;
+}

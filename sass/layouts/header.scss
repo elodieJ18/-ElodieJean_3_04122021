@@ -1,26 +1,6 @@
-/*home*/
-
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-h2 {
-  font-family: "Shrikhand", cursive;
-}
-
-/*header*/
-
 #home-logo {
   text-align: center;
-}
-
-#home-logo img {
-  width: 50%;
-  padding-bottom: 2px;
-  padding-top: 15px;
+  img {
+    @include size-logo;
+  }
 }
