@@ -6,7 +6,7 @@
 }
 
 .footer-content a {
-  color: white;
+  color: $colour-light;
   font-size: 13px;
 }
 
@@ -22,8 +22,7 @@
 }
 
 .footer-element {
-  display: flex;
-  flex-direction: column;
+  @include flex-mobile;
 }
 
 .footer-mention {
@@ -38,7 +37,7 @@
 }
 
 .footer-menu-icon {
-  color: #ffff;
+  color: $colour-light;
 }
 .footer-menu-icon i {
   font-size: 13px;
@@ -46,5 +45,5 @@
 
 .footer-menu a,
 .footer-mention {
-  color: #ffff;
+  color: $colour-light;
 }

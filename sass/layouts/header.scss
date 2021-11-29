@@ -1,9 +1,0 @@
-@import "../utils/mixin";
-@import "../utils/variables";
-
-#home-logo {
-  text-align: center;
-  img {
-    @include size-logo;
-  }
-}
