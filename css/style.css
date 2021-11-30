@@ -404,8 +404,11 @@ button {
 .menu-text {
   display: flex;
   align-items: flex-end;
-  width: 80%;
+  width: 95%;
   justify-content: space-between;
+}
+.menu-text:active {
+  width: 80%;
 }
 
 .menu-price {
@@ -424,7 +427,7 @@ button {
   margin: 0;
   font-size: 13px;
   padding: 10px;
-  padding-top: 4px;
+  padding-top: 10px;
   padding-bottom: 4px;
 }
 
@@ -436,12 +439,14 @@ button {
   font-size: 11px;
 }
 
-.menu-btn-valider i {
-  color: #ffff;
+.menu-btn-valider {
   background-color: #99e2d0;
-  padding: 21px;
+  padding: 21px 21px 21px 21px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+.menu-btn-valider i {
+  color: #ffff;
 }
 
 .btn-commander {

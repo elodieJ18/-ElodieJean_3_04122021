@@ -85,8 +85,11 @@
 .menu-text {
   display: flex;
   align-items: flex-end;
-  width: 80%;
+  width: 95%;
   justify-content: space-between;
+  &:active {
+    width: 80%;
+  }
 }
 
 .menu-price {
@@ -104,7 +107,7 @@
   margin: 0;
   font-size: 13px;
   padding: 10px;
-  padding-top: 4px;
+  padding-top: 10px;
   padding-bottom: 4px;
 }
 
@@ -116,14 +119,15 @@
   font-size: 11px;
 }
 
-.menu-btn-valider i {
-  color: $colour-light;
+.menu-btn-valider {
   background-color: $colour-ticket-new;
-  padding: 21px;
+  padding: 21px 21px 21px 21px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  i {
+    color: $colour-light;
+  }
 }
-
 .btn-commander {
   background: $colour-mixed;
   box-shadow: $back-shadow;
