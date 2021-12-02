@@ -1,0 +1,9 @@
+ce que j'ai découvert:
+-sass 
+-animation avec :hover sur la div voisine
+-page de chargement
+
+difficulté:
+-sass installation + soucis @importe (compatibilité)
+-coeur + switch de couleur
+

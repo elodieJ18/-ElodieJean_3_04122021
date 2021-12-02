@@ -308,7 +308,7 @@ button {
   -webkit-background-clip: text;
   color: transparent;
 }
-.like i.fas.fa-heart:active {
+.like i.fas.fa-heart:hover {
   background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
   -webkit-text-stroke-color: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
   background-clip: text;
@@ -405,10 +405,54 @@ button {
   display: flex;
   align-items: flex-end;
   width: 95%;
+  overflow: hidden;
+  transition: transform 600ms ease-in-out;
   justify-content: space-between;
 }
-.menu-text:active {
-  width: 80%;
+.menu-text:hover {
+  transform: translate(-5px, 0);
+}
+.menu-text:hover + .menu-btn-valider {
+  display: block;
+  transform: scaleX(1);
+  animation-name: menu_btn_valider;
+  animation-duration: 500ms;
+}
+.menu-text:hover + .menu-btn-valider i {
+  transform: rotate(0deg);
+}
+
+@keyframes menu_btn_valider_i {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes menu_btn_valider {
+  0% {
+    transform: scaleX(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.menu-btn-valider {
+  display: none;
+  overflow: hidden;
+  background-color: #99e2d0;
+  padding: 17px 21px 17px 21px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+}
+.menu-btn-valider i {
+  animation-name: menu_btn_valider_i;
+  color: #ffff;
+  animation-duration: 500ms;
+  transform: rotate(0deg);
 }
 
 .menu-price {
@@ -437,16 +481,6 @@ button {
   padding-left: 10px;
   padding-right: 10px;
   font-size: 11px;
-}
-
-.menu-btn-valider {
-  background-color: #99e2d0;
-  padding: 21px 21px 21px 21px;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-.menu-btn-valider i {
-  color: #ffff;
 }
 
 .btn-commander {

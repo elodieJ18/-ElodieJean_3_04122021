@@ -86,9 +86,58 @@
   display: flex;
   align-items: flex-end;
   width: 95%;
+  overflow: hidden;
+  transition: transform 600ms ease-in-out;
   justify-content: space-between;
-  &:active {
-    width: 80%;
+
+  &:hover {
+    transform: translate(-5px, 0);
+  }
+  &:hover + .menu-btn-valider {
+    display: block;
+    transform: scaleX(1);
+    animation-name: menu_btn_valider;
+    animation-duration: 500ms;
+    i {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@keyframes menu_btn_valider_i {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes menu_btn_valider {
+  0% {
+    transform: scaleX(0.2);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.menu-btn-valider {
+  display: none;
+  overflow: hidden;
+  background-color: $colour-ticket-new;
+  padding: 17px 21px 17px 21px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  i {
+    animation-name: menu_btn_valider_i;
+    color: $colour-light;
+    animation-duration: 500ms;
+    transform: rotate(0deg);
   }
 }
 
@@ -119,15 +168,6 @@
   font-size: 11px;
 }
 
-.menu-btn-valider {
-  background-color: $colour-ticket-new;
-  padding: 21px 21px 21px 21px;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  i {
-    color: $colour-light;
-  }
-}
 .btn-commander {
   background: $colour-mixed;
   box-shadow: $back-shadow;

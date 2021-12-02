@@ -282,7 +282,7 @@ button {
   -webkit-text-stroke-color: black;
   -webkit-background-clip: text;
   color: transparent;
-  &:active {
+  &:hover {
     background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
     -webkit-text-stroke-color: -webkit-linear-gradient(
       bottom,
