@@ -87,6 +87,7 @@
   align-items: flex-end;
   width: 95%;
   overflow: hidden;
+  animation-name: menu-text;
   transition: transform 600ms ease-in-out;
   justify-content: space-between;
 
@@ -101,6 +102,16 @@
     i {
       transform: rotate(0deg);
     }
+  }
+}
+
+@keyframes menu-text {
+  0% {
+    width: 95%;
+  }
+
+  100% {
+    width: 81%;
   }
 }
 
