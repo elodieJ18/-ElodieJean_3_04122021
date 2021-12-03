@@ -395,64 +395,110 @@ button {
 }
 
 .menu-btn-element {
+  max-width: 100%;
   display: flex;
   background-color: #ffff;
   justify-content: space-between;
   box-shadow: 0px 6px 12px #c4c4c4;
+  overflow: hidden;
+  height: 4rem;
 }
-
-.menu-text {
+.menu-btn-element:hover .menu-btn-valider {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.menu-btn-element:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+.menu-btn-element .menu-text {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+.menu-btn-element .menu-text .menu-title-text {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 100%;
+  overflow: hidden;
+}
+.menu-btn-element .menu-text .menu-title-text > * {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+.menu-btn-element .menu-text .menu-title-price {
   display: flex;
   align-items: flex-end;
-  width: 95%;
-  overflow: hidden;
-  transition: transform 600ms ease-in-out;
-  justify-content: space-between;
+  max-width: 100%;
 }
-.menu-text:hover {
-  transform: translate(-5px, 0);
+.menu-btn-element .menu-btn-valider {
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -7rem;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  background-color: #ffff;
 }
-.menu-text:hover + .menu-btn-valider {
-  display: block;
-  transform: scaleX(1);
-  animation-name: menu_btn_valider;
-  animation-duration: 500ms;
+.menu-btn-element .menu-btn-valider > i {
+  color: #ffff;
+  border-radius: 50%;
+  background: white;
+  transition-duration: 0.5;
+  padding: 0, 5rem;
 }
-.menu-text:hover + .menu-btn-valider i {
-  transform: rotate(0deg);
+
+/*
+@keyframes menu-text {
+  0% {
+    width: 95%;
+  }
+
+  100% {
+    width: 81%;
+  }
+}
+
+@keyframes menu_btn_valider {
+  0% {
+    transform: scaleX(0.2);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes menu_btn_valider_i {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-@keyframes menu_btn_valider {
-  0% {
-    transform: scaleX(0.2);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
+
 .menu-btn-valider {
-  display: none;
   overflow: hidden;
-  background-color: #99e2d0;
+  background-color: $colour-ticket-new;
   padding: 17px 21px 17px 21px;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   transform-origin: right 50%;
   transform: scaleX(0);
-}
-.menu-btn-valider i {
-  animation-name: menu_btn_valider_i;
-  color: #ffff;
-  animation-duration: 500ms;
-  transform: rotate(0deg);
+  i {
+    animation-name: menu_btn_valider_i;
+    color: $colour-light;
+    animation-duration: 500ms;
+    transform: rotate(0deg);
+  }
 }
 
 .menu-price {
@@ -463,9 +509,9 @@ button {
 }
 
 .menu-title-text {
-  display: flex;
-  flex-direction: column;
+  @include flex-mobile;
 }
+
 
 .menu-title-text h4 {
   margin: 0;
@@ -483,6 +529,7 @@ button {
   font-size: 11px;
 }
 
+*/
 .btn-commander {
   background: linear-gradient(180deg, #ff79da, #9356dc);
   box-shadow: 0px 6px 12px #c4c4c4;

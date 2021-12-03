@@ -1,0 +1,19 @@
+double-clik pour valider ?
+
+
+
+.impact-isr-activ {
+  background-color: #295f7052;
+  transform: scaleX(1);
+  animation-name: linebar;
+  border-bottom: 9px solid #d4766e;
+}
+
+@keyframes linebar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

@@ -76,35 +76,66 @@
 }
 
 .menu-btn-element {
+  max-width: 100%;
   display: flex;
   background-color: #ffff;
   justify-content: space-between;
   box-shadow: $back-shadow;
-}
-
-.menu-text {
-  display: flex;
-  align-items: flex-end;
-  width: 95%;
   overflow: hidden;
-  animation-name: menu-text;
-  transition: transform 600ms ease-in-out;
-  justify-content: space-between;
-
-  &:hover {
-    transform: translate(-5px, 0);
+  height: 4rem;
+  &:hover .menu-btn-valider {
+    margin-right: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
   }
-  &:hover + .menu-btn-valider {
-    display: block;
-    transform: scaleX(1);
-    animation-name: menu_btn_valider;
-    animation-duration: 500ms;
-    i {
-      transform: rotate(0deg);
+  &:hover i {
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+  }
+  .menu-text {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    .menu-title-text {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      max-width: 100%;
+      overflow: hidden;
+      > * {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+      }
+    }
+    .menu-title-price {
+      display: flex;
+      align-items: flex-end;
+      max-width: 100%;
+    }
+  }
+  .menu-btn-valider {
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -7rem;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    background-color: $colour-light;
+    > i {
+      color: $colour-light;
+      border-radius: 50%;
+      background: white;
+      transition-duration: 0.5;
+      padding: 0, 5rem;
     }
   }
 }
 
+/*
 @keyframes menu-text {
   0% {
     width: 95%;
@@ -112,16 +143,6 @@
 
   100% {
     width: 81%;
-  }
-}
-
-@keyframes menu_btn_valider_i {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -135,8 +156,17 @@
   }
 }
 
+@keyframes menu_btn_valider_i {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .menu-btn-valider {
-  display: none;
   overflow: hidden;
   background-color: $colour-ticket-new;
   padding: 17px 21px 17px 21px;
@@ -163,6 +193,7 @@
   @include flex-mobile;
 }
 
+
 .menu-title-text h4 {
   margin: 0;
   font-size: 13px;
@@ -179,6 +210,7 @@
   font-size: 11px;
 }
 
+*/
 .btn-commander {
   background: $colour-mixed;
   box-shadow: $back-shadow;
