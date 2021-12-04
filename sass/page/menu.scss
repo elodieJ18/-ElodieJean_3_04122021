@@ -40,23 +40,6 @@
   background-color: $colour-block-one;
 }
 
-.menu-title {
-  display: flex;
-  justify-content: space-evenly;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  align-items: center;
-  width: 87%;
-  justify-content: space-between;
-  margin-left: 4%;
-  padding-top: 10%;
-}
-
-.btn-menu {
-  border-radius: 1rem;
-  margin-top: 10px;
-}
-
 .menu-element {
   @include flex-mobile;
   width: 93%;
@@ -75,118 +58,125 @@
   font-size: 14px;
 }
 
+.menu-title {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+  width: 87%;
+  justify-content: space-between;
+  margin-left: 4%;
+  padding-top: 10%;
+}
+
+/*debut animation*/
+.menu-title-price {
+  margin: 0;
+  font-size: 11px;
+}
+
 .menu-btn-element {
+  max-width: 100%;
   display: flex;
   background-color: #ffff;
   justify-content: space-between;
-  box-shadow: $back-shadow;
-}
-
-.menu-text {
-  display: flex;
-  align-items: flex-end;
-  width: 95%;
   overflow: hidden;
-  animation-name: menu-text;
-  transition: transform 600ms ease-in-out;
-  justify-content: space-between;
-
-  &:hover {
-    transform: translate(-5px, 0);
+  box-shadow: $back-shadow;
+  border-radius: 1rem;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  .menu-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .menu-title-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      max-width: 100%;
+      width: 100%;
+      overflow: hidden;
+      > * {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+      }
+    }
+    .menu-title-price {
+      display: flex;
+      align-items: flex-end;
+      max-width: 100%;
+      padding-right: 12px;
+      .menu-price {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+    &:hover {
+      margin-right: 0;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+    }
+    &:hover + .menu-btn-valider {
+      margin-right: 0;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      i {
+        color: $colour-light;
+        transform: rotate(360deg);
+        transition-duration: 0.8s;
+      }
+    }
   }
-  &:hover + .menu-btn-valider {
-    display: block;
-    transform: scaleX(1);
-    animation-name: menu_btn_valider;
-    animation-duration: 500ms;
-    i {
-      transform: rotate(0deg);
+  .menu-btn-valider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: $colour-ticket-new;
+    width: 3.5rem;
+    margin-right: -4rem;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    > i {
+      color: $colour-light;
     }
   }
 }
 
-@keyframes menu-text {
-  0% {
-    width: 95%;
-  }
-
-  100% {
-    width: 81%;
-  }
-}
-
-@keyframes menu_btn_valider_i {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes menu_btn_valider {
-  0% {
-    transform: scaleX(0.2);
-  }
-
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-.menu-btn-valider {
-  display: none;
-  overflow: hidden;
-  background-color: $colour-ticket-new;
-  padding: 17px 21px 17px 21px;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  transform-origin: right 50%;
-  transform: scaleX(0);
-  i {
-    animation-name: menu_btn_valider_i;
-    color: $colour-light;
-    animation-duration: 500ms;
-    transform: rotate(0deg);
-  }
-}
-
-.menu-price {
-  padding-bottom: 14px;
-  padding-right: 10px;
-  margin: 0;
-  font-size: 11px;
-}
-
+/*fin-animation*/
 .menu-title-text {
   @include flex-mobile;
-}
-
-.menu-title-text h4 {
-  margin: 0;
-  font-size: 13px;
-  padding: 10px;
-  padding-top: 10px;
-  padding-bottom: 4px;
-}
-
-.menu-title-text p {
-  margin: 0;
-  padding-bottom: 14px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 11px;
+  h4 {
+    margin: 0;
+    font-size: 13px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
+  p {
+    margin: 0;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 11px;
+  }
 }
 
 .btn-commander {
   background: $colour-mixed;
   box-shadow: $back-shadow;
   @include btn-form;
-}
-
-.btn-commander a {
-  text-decoration: none;
-  color: $colour-light;
-  font-size: 15px;
+  a {
+    text-decoration: none;
+    color: $colour-light;
+    font-size: 15px;
+  }
 }
