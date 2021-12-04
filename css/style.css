@@ -406,6 +406,7 @@ button {
   align-items: flex-end;
   width: 95%;
   overflow: hidden;
+  animation-name: menu-text;
   transition: transform 600ms ease-in-out;
   justify-content: space-between;
 }
@@ -422,6 +423,14 @@ button {
   transform: rotate(0deg);
 }
 
+@keyframes menu-text {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 81%;
+  }
+}
 @keyframes menu_btn_valider_i {
   0% {
     transform: rotate(0deg);
