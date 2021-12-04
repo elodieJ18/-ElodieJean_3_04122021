@@ -6,4 +6,5 @@ ce que j'ai découvert:
 difficulté:
 -sass installation + soucis @importe (compatibilité)
 -coeur + switch de couleur
+-flu animation Ease
 

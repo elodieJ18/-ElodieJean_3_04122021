@@ -1,6 +1,56 @@
 @import "../utils/mixin";
 @import "../utils/variables";
 
+/*chargement*/
+.loader {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.603);
+  opacity: 1;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  cursor: wait;
+  animation: loader 1s forwards;
+}
+
+.loader i {
+  margin-left: 42vw;
+  margin-right: 43vw;
+  margin-top: 60vw;
+  font-size: 17vw;
+  color: #9356dc;
+  animation: loader-spin 2s ease-in-out infinite;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+  75% {
+    opacity: 0;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0%;
+  }
+}
+@keyframes loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /*home*/
 
 body {
@@ -39,6 +89,7 @@ h2 {
 }
 
 input {
+  outline: none;
   border: none;
   background-color: $colour-block-one;
   color: rgb(34, 34, 34);
@@ -48,7 +99,7 @@ input {
 }
 
 #home-location {
-  box-shadow: $back-shadow;
+  box-shadow: inset 0px 0px 9px #c4c4c4;
   background-color: $colour-block-one;
 }
 
@@ -70,6 +121,7 @@ input {
     word-wrap: normal;
   }
   input {
+    background: none;
     border: none;
     ::placeholder {
       border: none;
@@ -108,6 +160,9 @@ input {
   background: $colour-mixed;
   box-shadow: $back-shadow;
   @include btn-form;
+  a &:hover {
+    color: $colour-dot;
+  }
 }
 
 .explore-restaurant-container a {
@@ -137,7 +192,9 @@ input {
   margin-left: 35px;
   h2 {
     font-family: $font-txt;
-    @include font-one;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0;
   }
 }
 

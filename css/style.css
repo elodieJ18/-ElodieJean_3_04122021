@@ -1,4 +1,53 @@
 @charset "UTF-8";
+/*chargement*/
+.loader {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.603);
+  opacity: 1;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  cursor: wait;
+  animation: loader 1s forwards;
+}
+
+.loader i {
+  margin-left: 42vw;
+  margin-right: 43vw;
+  margin-top: 60vw;
+  font-size: 17vw;
+  color: #9356dc;
+  animation: loader-spin 2s ease-in-out infinite;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+  75% {
+    opacity: 0;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0%;
+  }
+}
+@keyframes loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*home*/
 body {
   margin: 0;
@@ -34,6 +83,7 @@ h2 {
 }
 
 input {
+  outline: none;
   border: none;
   background-color: #e9e5e5;
   color: #222222;
@@ -43,7 +93,7 @@ input :active {
 }
 
 #home-location {
-  box-shadow: 0px 6px 12px #c4c4c4;
+  box-shadow: inset 0px 0px 9px #c4c4c4;
   background-color: #e9e5e5;
 }
 
@@ -65,6 +115,7 @@ input :active {
   word-wrap: normal;
 }
 .home-location-container input {
+  background: none;
   border: none;
 }
 .home-location-container input ::placeholder {
@@ -108,8 +159,11 @@ input :active {
   box-shadow: 0px 6px 12px #c4c4c4;
   border-radius: 1.5rem;
   padding: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 10px;
+}
+a .btn-explore-restaurant:hover {
+  color: #9356dc;
 }
 
 .explore-restaurant-container a {
@@ -122,7 +176,7 @@ input :active {
   background: linear-gradient(180deg, #ff79da, #9356dc);
   border-radius: 1.5rem;
   padding: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 10px;
   box-shadow: 0px 6px 12px #c4c4c4;
 }
@@ -147,7 +201,6 @@ input :active {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 0;
-  margin-top: 35px;
 }
 
 .btn-how-it-works {
@@ -405,6 +458,7 @@ button {
   border-radius: 1rem;
   margin-bottom: 1em;
   margin-top: 1em;
+  animation: move-btn 2s forwards;
 }
 .menu-btn-element .menu-text {
   display: flex;
@@ -471,6 +525,24 @@ button {
   color: #ffff;
 }
 
+@keyframes move-btn {
+  0% {
+    opacity: 0;
+    margin-top: 2em;
+  }
+  20% {
+    opacity: 0;
+    margin-top: 2em;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 1em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 1em;
+  }
+}
 /*fin-animation*/
 .menu-title-text {
   display: flex;
@@ -496,7 +568,7 @@ button {
   box-shadow: 0px 6px 12px #c4c4c4;
   border-radius: 1.5rem;
   padding: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 10px;
 }
 .btn-commander a {

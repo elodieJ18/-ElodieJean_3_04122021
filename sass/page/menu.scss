@@ -86,6 +86,7 @@
   border-radius: 1rem;
   margin-bottom: 1em;
   margin-top: 1em;
+  animation: move-btn 2s forwards;
   .menu-text {
     display: flex;
     align-items: flex-end;
@@ -149,6 +150,25 @@
     > i {
       color: $colour-light;
     }
+  }
+}
+
+@keyframes move-btn {
+  0% {
+    opacity: 0;
+    margin-top: 2em;
+  }
+  20% {
+    opacity: 0;
+    margin-top: 2em;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 1em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 1em;
   }
 }
 
