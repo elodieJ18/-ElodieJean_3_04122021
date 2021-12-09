@@ -1,7 +1,6 @@
 @import "../utils/mixin";
 @import "../utils/variables";
 
-/*chargement*/
 .loader {
   position: fixed;
   z-index: 1;
@@ -21,25 +20,19 @@
   margin-top: 60vw;
   font-size: 17vw;
   color: #9356dc;
-  animation: loader-spin 2s ease-in-out infinite;
+  animation: loader-spin 2s ease-in-out forwards;
 }
 
 @keyframes loader {
   0% {
     opacity: 1;
-    height: 100%;
   }
   50% {
     opacity: 1;
-    height: 100%;
-  }
-  75% {
-    opacity: 0;
-    height: 100%;
   }
   100% {
     opacity: 0;
-    height: 0%;
+    z-index: -1;
   }
 }
 @keyframes loader-spin {
@@ -71,7 +64,7 @@ h2 {
 #home-logo {
   text-align: center;
   img {
-    width: 50%;
+    width: 18vw;
     padding-bottom: 2px;
     padding-top: 15px;
   }
@@ -98,19 +91,35 @@ input {
   }
 }
 
-#home-location {
-  box-shadow: inset 0px 0px 9px #c4c4c4;
-  background-color: $colour-block-one;
+#home-location h1 {
+  display: block;
+  margin-top: 5vw;
+  width: 21vw;
+  text-align: center;
+}
+
+#home-location p {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: grey;
 }
 
 .home-location-container {
+  background-color: $colour-block-one;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding-top: 8px;
   padding-bottom: 8px;
-  width: 65%;
-  margin-left: 25%;
+  width: 100%;
+  border-radius: 1.5em;
+  padding-left: 0px;
+  i {
+    color: $colour-dot;
+  }
 
   .visually-hidden {
     position: absolute !important;
@@ -136,8 +145,10 @@ input {
 /*explore*/
 
 #explore-restaurant {
-  text-align: center;
-  box-shadow: $back-shadow;
+  border-right: solid 2px #9356dc;
+  margin-top: 28px;
+  margin-bottom: 22px;
+  padding-right: 76px;
 }
 
 .explore-restaurant-container {
@@ -184,6 +195,7 @@ input {
 
 #how-it-works {
   background-color: $colour-light;
+  box-shadow: rgb(196 196 196) 0px -6px 12px;
 }
 
 .how-it-works-content {
@@ -226,6 +238,29 @@ input {
   }
 }
 
+.home-search {
+  width: 100vw;
+}
+.home-search-content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+.how-it-works-element {
+  display: flex;
+  width: 95vw;
+  column-gap: 44px;
+  justify-content: space-around;
+  flex-direction: row;
+  .how-it-works-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+  }
+}
+
 .restaurants-choices-container-results-grid--element---image-container span {
   color: $colour-typo-new;
   background-color: $colour-ticket-new;
@@ -233,7 +268,9 @@ input {
 
 .how-it-works-icon {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
   i {
     color: gray;
     padding-left: 10px;
@@ -266,9 +303,9 @@ input {
   border-radius: 2%;
   gap: 34px;
   margin-top: 38px;
-  width: 95%;
-  margin-left: 15px;
-  margin-bottom: 35px;
+  width: 94vw;
+  margin-left: 3vw;
+  margin-bottom: 15vh;
 }
 
 .restaurants-choices-container-results-grid--element---description {
@@ -277,7 +314,7 @@ input {
 
 .restaurants-choices-container-results-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-row: 2;
   gap: 28px;
@@ -351,5 +388,369 @@ button {
     color: transparent;
     -webkit-text-stroke: unset;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 720px) {
+  /*chargement*/
+  .loader {
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.603);
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    cursor: wait;
+    animation: loader 1s forwards;
+  }
+
+  .loader i {
+    margin-left: 42vw;
+    margin-right: 43vw;
+    margin-top: 60vw;
+    font-size: 17vw;
+    color: #9356dc;
+    animation: loader-spin 2s ease-in-out forwards;
+  }
+
+  @keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  @keyframes loader-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*home*/
+
+  body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-family: "Shrikhand", cursive;
+  }
+
+  /*header*/
+
+  #home-logo {
+    text-align: center;
+    img {
+      width: 50vw;
+      padding-bottom: 2px;
+      padding-top: 15px;
+    }
+  }
+
+  /*recherche*/
+
+  .btn-map button {
+    border: none;
+    background-color: transparent;
+    color: gray;
+    a {
+      color: rgb(75, 75, 75);
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    background-color: $colour-block-one;
+    color: rgb(34, 34, 34);
+    :active {
+      border: none;
+    }
+  }
+
+  .home-search-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  #home-location h1 {
+    display: none;
+  }
+
+  #home-location p {
+    display: none;
+  }
+
+  #home-location {
+    box-shadow: inset 0px 0px 9px #c4c4c4;
+    background-color: $colour-block-one;
+  }
+
+  .home-location-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 65%;
+    margin-left: 25%;
+
+    .visually-hidden {
+      position: absolute !important;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      width: 1px;
+      height: 1px;
+      word-wrap: normal;
+    }
+    input {
+      background: none;
+      border: none;
+      ::placeholder {
+        border: none;
+      }
+      :focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  /*explore*/
+
+  #explore-restaurant {
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .explore-restaurant-container {
+    @include text-center-column;
+    h1 {
+      width: 60%;
+      font-family: $font-txt;
+      @include font-one;
+    }
+    p {
+      font-family: $font-txt;
+      font-weight: 100;
+      font-size: 15px;
+      margin-bottom: 15px;
+      color: grey;
+    }
+  }
+
+  .btn-explore-restaurant {
+    background: $colour-mixed;
+    box-shadow: $back-shadow;
+    @include btn-form;
+    a &:hover {
+      color: $colour-dot;
+    }
+  }
+
+  .explore-restaurant-container a {
+    text-decoration: none;
+    color: $colour-light;
+    font-size: 15px;
+  }
+
+  .btn-explore-restaurant {
+    background: $colour-mixed;
+    @include btn-form;
+    box-shadow: $back-shadow;
+    a {
+      @include a-transform;
+    }
+  }
+
+  /*fonctionnements*/
+
+  #how-it-works {
+    background-color: $colour-light;
+    box-shadow: none;
+  }
+
+  .how-it-works-content {
+    @include flex-mobile;
+    align-items: flex-start;
+    margin-left: 35px;
+    h2 {
+      font-family: $font-txt;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-how-it-works {
+    border-radius: 1.5rem;
+    padding: 16px;
+    padding-right: 30px;
+    margin-top: 10px;
+  }
+
+  .how-it-works-btn span {
+    color: $colour-light;
+    @include pastille;
+    background-color: $colour-dot;
+  }
+
+  .how-it-works-element {
+    @include flex-mobile;
+    width: 95%;
+  }
+
+  .how-it-works-btn-element {
+    background-color: $colour-block-one;
+    box-shadow: $back-shadow;
+    :hover {
+      background-color: #9256dc0e;
+      box-shadow: $back-shadow;
+      color: $colour-dot;
+    }
+  }
+
+  .restaurants-choices-container-results-grid--element---image-container span {
+    color: $colour-typo-new;
+    background-color: $colour-ticket-new;
+  }
+
+  .how-it-works-icon {
+    justify-content: flex-start !important;
+    column-gap: 14px !important;
+    i {
+      color: gray;
+      padding-left: 10px;
+      :hover {
+        color: $colour-dot;
+      }
+    }
+  }
+
+  .how-it-works-content-third {
+    margin-bottom: 20px;
+  }
+
+  /*restaurant-choices*/
+
+  #restaurants-choices span {
+    background-color: $colour-ticket-new;
+    color: $colour-typo-new;
+    @include ticket-card;
+  }
+
+  .restaurants-choices-title {
+    margin: 0;
+    padding: 0 0 2rem 0;
+  }
+  /**/
+  #restaurants-choices {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 2%;
+    gap: 34px;
+    margin-top: 38px;
+    width: 95%;
+    margin-left: 15px;
+    margin-bottom: 35px;
+  }
+
+  .restaurants-choices-container-results-grid--element---description {
+    text-decoration: none;
+  }
+
+  .restaurants-choices-container-results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row: 2;
+    gap: 28px;
+    a {
+      color: black;
+    }
+  }
+
+  .restaurants-choices-container-results-grid--element {
+    display: grid;
+    grid-template-rows: 1fr;
+    border-radius: 1.2rem;
+    padding: 3px;
+    box-shadow: $back-shadow;
+    width: 93%;
+    &---image-container {
+      height: 113px;
+      overflow: hidden;
+    }
+    &---image {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      text-align: center;
+    }
+    &--element---description {
+      margin-top: 10px;
+      margin-left: 12px;
+      margin-bottom: 10px;
+    }
+  }
+
+  /**/
+  .restaurants-choices-container-results-way {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    padding: 10px 10px 10px 10px;
+    h4,
+    p {
+      margin: 0;
+    }
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+
+  .like i.fas.fa-heart {
+    font-size: 20px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-background-clip: text;
+    color: transparent;
+    &:hover {
+      background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
+      -webkit-text-stroke-color: -webkit-linear-gradient(
+        bottom,
+        #ff79da,
+        #9356dc 1rem
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-stroke: unset;
+      cursor: pointer;
+    }
   }
 }

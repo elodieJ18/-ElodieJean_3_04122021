@@ -11,30 +11,31 @@
 
 #menu-française {
   background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-color: #e9e5e5;
   background-repeat: no-repeat;
-  background-size: contain;
-  padding-top: 55%;
+  background-size: cover;
+  padding-top: 10%;
 }
 
 #enchantee {
   background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  padding-top: 55%;
+  background-size: cover;
+  padding-top: 10%;
 }
 
 #palette_gout {
   background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  padding-top: 55%;
+  background-size: cover;
+  padding-top: 10%;
 }
 
 #delice_sens {
   background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  padding-top: 55%;
+  background-size: cover;
+  padding-top: 10%;
 }
 
 .fond-ecran-content {
@@ -55,9 +56,12 @@
   margin-top: 35px;
 }
 
+.fond-ecran-menu {
+  background-color: #e9e5e5;
+}
+
 .menu-content {
-  @include flex-mobile;
-  align-items: center;
+  @include flex;
   background-color: $colour-block-one;
 }
 
@@ -88,7 +92,7 @@
   width: 87%;
   justify-content: space-between;
   margin-left: 4%;
-  padding-top: 10%;
+  padding-top: 2%;
 }
 
 /*debut animation*/
@@ -220,5 +224,233 @@
     text-decoration: none;
     color: $colour-light;
     font-size: 15px;
+  }
+}
+
+@media (max-width: 720px) {
+  /*menu*/
+  .home-content {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-left: 6%;
+  }
+
+  #menu-française {
+    background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-color: #e9e5e5;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 55%;
+  }
+
+  #enchantee {
+    background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 55%;
+  }
+
+  #palette_gout {
+    background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 55%;
+  }
+
+  #delice_sens {
+    background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 55%;
+  }
+
+  .fond-ecran-content {
+    background-color: $colour-block-one;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+  }
+
+  .fond-ecran-content h2 {
+    font-family: "Shrikhand", cursive;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .menu-like {
+    margin-top: 35px;
+  }
+
+  .menu-content {
+    @include flex-mobile;
+    align-items: center;
+    background-color: $colour-block-one;
+    > * {
+      flex: 1 1 50px;
+    }
+  }
+
+  .menu-element {
+    @include flex-mobile;
+    width: 93%;
+    padding-bottom: 30px;
+  }
+
+  .menu-element h2 {
+    text-transform: capitalize;
+  }
+
+  .menu-element h3 {
+    font-weight: 100;
+    color: gray;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .menu-title {
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+    width: 87%;
+    justify-content: space-between;
+    margin-left: 4%;
+    padding-top: 10%;
+  }
+
+  /*debut animation*/
+  .menu-title-price {
+    margin: 0;
+    font-size: 11px;
+  }
+
+  .menu-btn-element {
+    max-width: 100%;
+    display: flex;
+    background-color: #ffff;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: $back-shadow;
+    border-radius: 1rem;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    animation: move-btn 2s forwards;
+    .menu-text {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      max-width: 100%;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      .menu-title-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+        > * {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          max-width: 100%;
+        }
+      }
+      .menu-title-price {
+        display: flex;
+        align-items: flex-end;
+        max-width: 100%;
+        padding-right: 12px;
+        .menu-price {
+          padding-right: 10px;
+          padding-left: 10px;
+          font-weight: 600;
+        }
+      }
+      &:hover {
+        margin-right: 0;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+      }
+      &:hover + .menu-btn-valider {
+        margin-right: 0;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        i {
+          color: $colour-light;
+          transform: rotate(360deg);
+          transition-duration: 0.8s;
+        }
+      }
+    }
+    .menu-btn-valider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: $colour-ticket-new;
+      width: 3.5rem;
+      margin-right: -4rem;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      > i {
+        color: $colour-light;
+      }
+    }
+  }
+
+  @keyframes move-btn {
+    0% {
+      opacity: 0;
+      margin-top: 2em;
+    }
+    20% {
+      opacity: 0;
+      margin-top: 2em;
+    }
+    80% {
+      opacity: 1;
+      margin-top: 1em;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 1em;
+    }
+  }
+
+  /*fin-animation*/
+  .menu-title-text {
+    @include flex-mobile;
+    h4 {
+      margin: 0;
+      font-size: 13px;
+      padding: 10px;
+      padding-top: 10px;
+      padding-bottom: 4px;
+    }
+    p {
+      margin: 0;
+      padding-bottom: 14px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 11px;
+    }
+  }
+
+  .btn-commander {
+    background: $colour-mixed;
+    box-shadow: $back-shadow;
+    @include btn-form;
+    a {
+      text-decoration: none;
+      color: $colour-light;
+      font-size: 15px;
+    }
   }
 }

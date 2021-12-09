@@ -53,6 +53,15 @@
   border-radius: 2px;
 }
 
+@mixin flex {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: 4vw;
+  width: 87%;
+  column-gap: 17px;
+}
+
 @mixin flex-mobile {
   display: flex;
   flex-direction: column;
