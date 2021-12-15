@@ -91,11 +91,21 @@ input {
   }
 }
 
+#home-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #home-location h1 {
   display: block;
   margin-top: 5vw;
   width: 21vw;
   text-align: center;
+}
+
+#home-location a {
+  color: $colour-light;
 }
 
 #home-location p {
@@ -329,9 +339,9 @@ input {
   border-radius: 1.2rem;
   padding: 3px;
   box-shadow: $back-shadow;
-  width: 93%;
+  width: 99%;
   &---image-container {
-    height: 113px;
+    height: 206px;
     overflow: hidden;
   }
   &---image {
@@ -462,6 +472,10 @@ button {
     }
   }
 
+  #home-location .btn-explore-restaurant {
+    display: none;
+  }
+
   /*recherche*/
 
   .btn-map button {
@@ -589,7 +603,8 @@ button {
   .how-it-works-content {
     @include flex-mobile;
     align-items: flex-start;
-    margin-left: 35px;
+    width: 95%;
+    margin-left: 15px;
     h2 {
       font-family: $font-txt;
       font-weight: 700;
@@ -613,7 +628,8 @@ button {
 
   .how-it-works-element {
     @include flex-mobile;
-    width: 95%;
+    width: 85%;
+    margin-left: 20px;
   }
 
   .how-it-works-btn-element {

@@ -6,8 +6,8 @@
 @mixin btn-form {
   border-radius: 1.5rem;
   padding: 16px;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  margin-bottom: 6vh;
+  margin-top: 1vh;
 }
 
 @mixin font-one {
@@ -58,7 +58,7 @@
   flex-wrap: nowrap;
   align-items: center;
   margin-left: 4vw;
-  width: 87%;
+  width: 86%;
   column-gap: 17px;
 }
 

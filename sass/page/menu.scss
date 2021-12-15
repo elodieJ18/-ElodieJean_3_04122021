@@ -7,6 +7,7 @@
   align-items: center;
   width: 90%;
   margin-left: 6%;
+  column-gap: 20px;
 }
 
 #menu-française {
@@ -63,11 +64,17 @@
 .menu-content {
   @include flex;
   background-color: $colour-block-one;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex: 1 1 32%;
+  }
 }
 
 .menu-element {
   @include flex-mobile;
   width: 93%;
+  max-width: 30%;
   padding-bottom: 30px;
 }
 
@@ -99,6 +106,10 @@
 .menu-title-price {
   margin: 0;
   font-size: 11px;
+}
+
+.menu-btn {
+  max-width: 100%;
 }
 
 .menu-btn-element {
@@ -220,6 +231,9 @@
   background: $colour-mixed;
   box-shadow: $back-shadow;
   @include btn-form;
+  margin-right: 30vw;
+  margin-left: 30vw;
+  text-align: center;
   a {
     text-decoration: none;
     color: $colour-light;
@@ -287,14 +301,12 @@
     @include flex-mobile;
     align-items: center;
     background-color: $colour-block-one;
-    > * {
-      flex: 1 1 50px;
-    }
   }
 
   .menu-element {
     @include flex-mobile;
     width: 93%;
+    max-width: 100%;
     padding-bottom: 30px;
   }
 
@@ -389,6 +401,7 @@
         }
       }
     }
+
     .menu-btn-valider {
       display: flex;
       align-items: center;
@@ -447,6 +460,8 @@
     background: $colour-mixed;
     box-shadow: $back-shadow;
     @include btn-form;
+    margin-right: 0vw;
+    margin-left: 0vw;
     a {
       text-decoration: none;
       color: $colour-light;
