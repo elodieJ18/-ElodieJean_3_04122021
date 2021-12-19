@@ -58,6 +58,7 @@ h2 {
 /*header*/
 #home-logo {
   text-align: center;
+  box-shadow: #c4c4c4 0px 4px 12px;
 }
 #home-logo img {
   width: 18vw;
@@ -178,10 +179,12 @@ input :active {
 .btn-explore-restaurant {
   background: linear-gradient(180deg, #ff79da, #9356dc);
   box-shadow: 0px 6px 12px #c4c4c4;
+  width: 164px;
+  text-align: center;
   border-radius: 1.5rem;
   padding: 16px;
-  margin-bottom: 6vh;
-  margin-top: 1vh;
+  margin-bottom: 8vh;
+  margin-top: 4vh;
 }
 a .btn-explore-restaurant:hover {
   color: #9356dc;
@@ -197,8 +200,8 @@ a .btn-explore-restaurant:hover {
   background: linear-gradient(180deg, #ff79da, #9356dc);
   border-radius: 1.5rem;
   padding: 16px;
-  margin-bottom: 6vh;
-  margin-top: 1vh;
+  margin-bottom: 8vh;
+  margin-top: 4vh;
   box-shadow: 0px 6px 12px #c4c4c4;
 }
 .btn-explore-restaurant a {
@@ -313,8 +316,9 @@ a .btn-explore-restaurant:hover {
   background-color: #99e2d0;
   color: #048162;
   position: relative;
-  bottom: 6.8rem;
-  left: 12.5rem;
+  bottom: 12rem;
+  right: 2vw;
+  float: right;
   padding: 6px;
   padding-left: 12px;
   padding-right: 12px;
@@ -538,6 +542,7 @@ button {
     padding-bottom: 8px;
     width: 65%;
     margin-left: 25%;
+    background-color: unset;
   }
   .home-location-container .visually-hidden {
     position: absolute !important;
@@ -592,8 +597,8 @@ button {
     box-shadow: 0px 6px 12px #c4c4c4;
     border-radius: 1.5rem;
     padding: 16px;
-    margin-bottom: 6vh;
-    margin-top: 1vh;
+    margin-bottom: 8vh;
+    margin-top: 4vh;
   }
   a .btn-explore-restaurant:hover {
     color: #9356dc;
@@ -609,8 +614,8 @@ button {
     background: linear-gradient(180deg, #ff79da, #9356dc);
     border-radius: 1.5rem;
     padding: 16px;
-    margin-bottom: 6vh;
-    margin-top: 1vh;
+    margin-bottom: 8vh;
+    margin-top: 4vh;
     box-shadow: 0px 6px 12px #c4c4c4;
   }
   .btn-explore-restaurant a {
@@ -702,7 +707,8 @@ button {
     color: #048162;
     position: relative;
     bottom: 6.8rem;
-    left: 12.5rem;
+    right: 2vw;
+    float: right;
     padding: 6px;
     padding-left: 12px;
     padding-right: 12px;
@@ -865,6 +871,7 @@ button {
 
 .fond-ecran-menu {
   background-color: #e9e5e5;
+  padding-bottom: 18vh;
 }
 
 .menu-content {
@@ -1044,11 +1051,12 @@ button {
   box-shadow: 0px 6px 12px #c4c4c4;
   border-radius: 1.5rem;
   padding: 16px;
-  margin-bottom: 6vh;
-  margin-top: 1vh;
-  margin-right: 30vw;
-  margin-left: 30vw;
+  margin-bottom: 8vh;
+  margin-top: 4vh;
+  float: right;
   text-align: center;
+  width: 134px;
+  margin-right: 10vw;
 }
 .btn-commander a {
   text-decoration: none;
@@ -1117,6 +1125,8 @@ button {
     flex-direction: column;
     align-items: center;
     background-color: #e9e5e5;
+    margin-left: 0vw;
+    width: 95%;
   }
 
   .menu-element {
@@ -1272,15 +1282,19 @@ button {
     font-size: 11px;
   }
 
+  .fond-ecran-menu {
+    background-color: #e9e5e5;
+    padding-bottom: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .btn-commander {
     background: linear-gradient(180deg, #ff79da, #9356dc);
     box-shadow: 0px 6px 12px #c4c4c4;
-    border-radius: 1.5rem;
-    padding: 16px;
-    margin-bottom: 6vh;
-    margin-top: 1vh;
+    width: 134px;
     margin-right: 0vw;
-    margin-left: 0vw;
   }
   .btn-commander a {
     text-decoration: none;

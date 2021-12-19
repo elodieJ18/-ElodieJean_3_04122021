@@ -63,6 +63,7 @@ h2 {
 
 #home-logo {
   text-align: center;
+  box-shadow: #c4c4c4 0px 4px 12px;
   img {
     width: 18vw;
     padding-bottom: 2px;
@@ -180,6 +181,8 @@ input {
 .btn-explore-restaurant {
   background: $colour-mixed;
   box-shadow: $back-shadow;
+  width: 164px;
+  text-align: center;
   @include btn-form;
   a &:hover {
     color: $colour-dot;
@@ -524,6 +527,7 @@ button {
     padding-bottom: 8px;
     width: 65%;
     margin-left: 25%;
+    background-color: unset;
 
     .visually-hidden {
       position: absolute !important;
@@ -668,7 +672,7 @@ button {
   #restaurants-choices span {
     background-color: $colour-ticket-new;
     color: $colour-typo-new;
-    @include ticket-card;
+    @include ticket-card-mobile;
   }
 
   .restaurants-choices-title {

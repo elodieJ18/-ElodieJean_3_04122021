@@ -59,6 +59,7 @@
 
 .fond-ecran-menu {
   background-color: #e9e5e5;
+  padding-bottom: 18vh;
 }
 
 .menu-content {
@@ -231,9 +232,10 @@
   background: $colour-mixed;
   box-shadow: $back-shadow;
   @include btn-form;
-  margin-right: 30vw;
-  margin-left: 30vw;
+  float: right;
   text-align: center;
+  width: 134px;
+  margin-right: 10vw;
   a {
     text-decoration: none;
     color: $colour-light;
@@ -301,6 +303,8 @@
     @include flex-mobile;
     align-items: center;
     background-color: $colour-block-one;
+    margin-left: 0vw;
+    width: 95%;
   }
 
   .menu-element {
@@ -456,12 +460,19 @@
     }
   }
 
+  .fond-ecran-menu {
+    background-color: #e9e5e5;
+    padding-bottom: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .btn-commander {
     background: $colour-mixed;
     box-shadow: $back-shadow;
-    @include btn-form;
+    width: 134px;
     margin-right: 0vw;
-    margin-left: 0vw;
     a {
       text-decoration: none;
       color: $colour-light;
