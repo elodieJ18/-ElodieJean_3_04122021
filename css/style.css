@@ -45,6 +45,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -189,6 +190,10 @@ input :active {
 a .btn-explore-restaurant:hover {
   color: #9356dc;
 }
+.btn-explore-restaurant:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px #aaa6a6;
+}
 
 .explore-restaurant-container a {
   text-decoration: none;
@@ -246,6 +251,7 @@ a .btn-explore-restaurant:hover {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #9356dc;
+  z-index: 1;
 }
 
 .how-it-works-element {
@@ -257,10 +263,20 @@ a .btn-explore-restaurant:hover {
 .how-it-works-btn-element {
   background-color: #e9e5e5;
   box-shadow: 0px 6px 12px #c4c4c4;
+  display: flex;
+  justify-content: space-evenly;
+  width: 20vw;
+  padding: 0;
+  transform: scale(1);
 }
-.how-it-works-btn-element :hover {
-  background-color: #9256dc0e;
-  box-shadow: 0px 6px 12px #c4c4c4;
+.how-it-works-btn-element:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px #aaa6a6;
+}
+.how-it-works-btn-element:hover > * {
+  color: black;
+}
+.how-it-works-btn-element:hover > * i {
   color: #9356dc;
 }
 
@@ -302,9 +318,6 @@ a .btn-explore-restaurant:hover {
 .how-it-works-icon i {
   color: gray;
   padding-left: 10px;
-}
-.how-it-works-icon i :hover {
-  color: #9356dc;
 }
 
 .how-it-works-content-third {
@@ -367,6 +380,10 @@ a .btn-explore-restaurant:hover {
   box-shadow: 0px 6px 12px #c4c4c4;
   width: 99%;
 }
+.restaurants-choices-container-results-grid--element:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px #aaa6a6;
+}
 .restaurants-choices-container-results-grid--element---image-container {
   height: 206px;
   overflow: hidden;
@@ -388,7 +405,6 @@ a .btn-explore-restaurant:hover {
   margin-bottom: 10px;
 }
 
-/**/
 .restaurants-choices-container-results-way {
   display: flex;
   align-items: center;
@@ -408,21 +424,65 @@ button {
 
 .like i.fas.fa-heart {
   font-size: 20px;
+  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem, #9356dc 1rem, transparent, transparent);
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
+  -webkit-background-size: 58px;
   -webkit-background-clip: text;
   color: transparent;
+  cursor: pointer;
+  transition: background-size 1s ease-in-out;
+  overflow: hidden;
+  padding: 1px;
 }
 .like i.fas.fa-heart:hover {
-  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
-  -webkit-text-stroke-color: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
-  background-clip: text;
+  -webkit-background-size: 19px;
   -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: unset;
-  cursor: pointer;
+  -webkit-text-stroke: 0px;
 }
 
+@media (max-width: 1024px) {
+  #explore-restaurant {
+    border-right: solid 2px #9356dc;
+    margin-top: 28px;
+    margin-bottom: 22px;
+    padding-right: 12px;
+  }
+
+  #home-location h1 {
+    display: block;
+    margin-top: 5vw;
+    width: 28vw;
+    text-align: center;
+  }
+
+  .how-it-works-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    margin-left: 8vw;
+  }
+  .how-it-works-content .how-it-works-element {
+    display: flex;
+    width: 82vw;
+    column-gap: 44px;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 3vw;
+  }
+  .how-it-works-content .how-it-works-element .how-it-works-btn-element {
+    background-color: #e9e5e5;
+    box-shadow: 0px 6px 12px #c4c4c4;
+    display: flex;
+    justify-content: flex-start;
+    width: 74vw;
+    padding: 0;
+    transform: scale(1);
+    justify-content: center;
+    column-gap: 2vw;
+  }
+}
 @media (max-width: 720px) {
   /*chargement*/
   .loader {
@@ -484,6 +544,7 @@ button {
   /*header*/
   #home-logo {
     text-align: center;
+    box-shadow: unset;
   }
   #home-logo img {
     width: 50vw;
@@ -568,6 +629,7 @@ button {
   #explore-restaurant {
     text-align: center;
     padding-right: 0px;
+    border-right: none;
   }
 
   .explore-restaurant-container {
@@ -621,6 +683,10 @@ button {
   .btn-explore-restaurant a {
     text-decoration: none;
     color: #ffff;
+    transform: scale(1);
+  }
+  .btn-explore-restaurant:hover {
+    transform: scale(1.02);
   }
 
   /*fonctionnements*/
@@ -634,7 +700,6 @@ button {
     flex-direction: column;
     align-items: flex-start;
     width: 95%;
-    margin-left: 15px;
   }
   .how-it-works-content h2 {
     font-family: "Roboto", sans-serif;
@@ -661,6 +726,7 @@ button {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: #9356dc;
+    z-index: 1;
   }
 
   .how-it-works-element {
@@ -673,10 +739,20 @@ button {
   .how-it-works-btn-element {
     background-color: #e9e5e5;
     box-shadow: 0px 6px 12px #c4c4c4;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    padding: 0;
+    transform: scale(1);
   }
-  .how-it-works-btn-element :hover {
-    background-color: #9256dc0e;
-    box-shadow: 0px 6px 12px #c4c4c4;
+  .how-it-works-btn-element:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px #aaa6a6;
+  }
+  .how-it-works-btn-element:hover > * {
+    color: black;
+  }
+  .how-it-works-btn-element:hover > * i {
     color: #9356dc;
   }
 
@@ -692,9 +768,6 @@ button {
   .how-it-works-icon i {
     color: gray;
     padding-left: 10px;
-  }
-  .how-it-works-icon i :hover {
-    color: #9356dc;
   }
 
   .how-it-works-content-third {
@@ -729,8 +802,8 @@ button {
     border-radius: 2%;
     gap: 34px;
     margin-top: 38px;
-    width: 95%;
-    margin-left: 15px;
+    width: 90%;
+    margin-left: 8vw;
     margin-bottom: 35px;
   }
 
@@ -756,6 +829,10 @@ button {
     padding: 3px;
     box-shadow: 0px 6px 12px #c4c4c4;
     width: 93%;
+  }
+  .restaurants-choices-container-results-grid--element:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px #aaa6a6;
   }
   .restaurants-choices-container-results-grid--element---image-container {
     height: 113px;
@@ -795,24 +872,16 @@ button {
     border: none;
     background: none;
   }
-
-  .like i.fas.fa-heart {
-    font-size: 20px;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: black;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  .like i.fas.fa-heart:hover {
-    background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
-    -webkit-text-stroke-color: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: unset;
-    cursor: pointer;
-  }
 }
+#home-logo-menu {
+  text-align: center;
+}
+#home-logo-menu img {
+  width: 18vw;
+  padding-bottom: 2px;
+  padding-top: 15px;
+}
+
 /*menu*/
 .home-content {
   display: flex;
@@ -827,6 +896,7 @@ button {
   background-color: #e9e5e5;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -834,6 +904,7 @@ button {
   background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -841,6 +912,7 @@ button {
   background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -848,6 +920,7 @@ button {
   background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -1065,12 +1138,23 @@ button {
 }
 
 @media (max-width: 720px) {
+  #home-logo-menu {
+    text-align: center;
+    box-shadow: unset;
+  }
+  #home-logo-menu img {
+    width: 50vw;
+    padding-bottom: 2px;
+    padding-top: 15px;
+  }
+
   /*menu*/
   .home-content {
     display: flex;
     align-items: center;
-    width: 90%;
-    margin-left: 6%;
+    width: 82%;
+    margin-left: 0%;
+    justify-content: space-evenly;
   }
 
   #menu-française {
@@ -1078,6 +1162,7 @@ button {
     background-color: #e9e5e5;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 
@@ -1085,6 +1170,7 @@ button {
     background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 
@@ -1092,6 +1178,7 @@ button {
     background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 
@@ -1099,6 +1186,7 @@ button {
     background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 

@@ -1,6 +1,15 @@
 @import "../utils/mixin";
 @import "../utils/variables";
 
+#home-logo-menu {
+  text-align: center;
+  img {
+    width: 18vw;
+    padding-bottom: 2px;
+    padding-top: 15px;
+  }
+}
+
 /*menu*/
 .home-content {
   display: flex;
@@ -15,6 +24,7 @@
   background-color: #e9e5e5;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -22,6 +32,7 @@
   background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -29,6 +40,7 @@
   background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -36,6 +48,7 @@
   background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   padding-top: 10%;
 }
 
@@ -244,12 +257,23 @@
 }
 
 @media (max-width: 720px) {
+  #home-logo-menu {
+    text-align: center;
+    box-shadow: unset;
+    img {
+      width: 50vw;
+      padding-bottom: 2px;
+      padding-top: 15px;
+    }
+  }
+
   /*menu*/
   .home-content {
     display: flex;
     align-items: center;
-    width: 90%;
-    margin-left: 6%;
+    width: 82%;
+    margin-left: 0%;
+    justify-content: space-evenly;
   }
 
   #menu-française {
@@ -257,6 +281,7 @@
     background-color: #e9e5e5;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 
@@ -264,6 +289,7 @@
     background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 
@@ -271,6 +297,7 @@
     background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 
@@ -278,6 +305,7 @@
     background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: unset;
     padding-top: 55%;
   }
 

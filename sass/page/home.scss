@@ -49,6 +49,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -187,6 +188,10 @@ input {
   a &:hover {
     color: $colour-dot;
   }
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: $back-shadow-hover;
+  }
 }
 
 .explore-restaurant-container a {
@@ -234,6 +239,7 @@ input {
   color: $colour-light;
   @include pastille;
   background-color: $colour-dot;
+  z-index: 1;
 }
 
 .how-it-works-element {
@@ -244,10 +250,20 @@ input {
 .how-it-works-btn-element {
   background-color: $colour-block-one;
   box-shadow: $back-shadow;
-  :hover {
-    background-color: #9256dc0e;
-    box-shadow: $back-shadow;
-    color: $colour-dot;
+  display: flex;
+  justify-content: space-evenly;
+  width: 20vw;
+  padding: 0;
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: $back-shadow-hover;
+  }
+  &:hover > * {
+    color: black;
+    i {
+      color: $colour-dot;
+    }
   }
 }
 
@@ -287,9 +303,6 @@ input {
   i {
     color: gray;
     padding-left: 10px;
-    :hover {
-      color: $colour-dot;
-    }
   }
 }
 
@@ -343,6 +356,9 @@ input {
   padding: 3px;
   box-shadow: $back-shadow;
   width: 99%;
+  &:hover {
+    @include hover-btn;
+  }
   &---image-container {
     height: 206px;
     overflow: hidden;
@@ -365,7 +381,6 @@ input {
   }
 }
 
-/**/
 .restaurants-choices-container-results-way {
   display: flex;
   align-items: center;
@@ -385,22 +400,70 @@ button {
 
 .like i.fas.fa-heart {
   font-size: 20px;
+  background: -webkit-linear-gradient(
+    bottom,
+    #ff79da,
+    #9356dc 1rem,
+    #9356dc 1rem,
+    transparent,
+    transparent
+  );
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
+  -webkit-background-size: 58px;
   -webkit-background-clip: text;
   color: transparent;
+  cursor: pointer;
+  transition: background-size 1s ease-in-out;
+  overflow: hidden;
+  padding: 1px;
   &:hover {
-    background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
-    -webkit-text-stroke-color: -webkit-linear-gradient(
-      bottom,
-      #ff79da,
-      #9356dc 1rem
-    );
-    background-clip: text;
+    -webkit-background-size: 19px;
     -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: unset;
-    cursor: pointer;
+    -webkit-text-stroke: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #explore-restaurant {
+    border-right: solid 2px #9356dc;
+    margin-top: 28px;
+    margin-bottom: 22px;
+    padding-right: 12px;
+  }
+
+  #home-location h1 {
+    display: block;
+    margin-top: 5vw;
+    width: 28vw;
+    text-align: center;
+  }
+
+  .how-it-works-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    margin-left: 8vw;
+    .how-it-works-element {
+      display: flex;
+      width: 82vw;
+      column-gap: 44px;
+      justify-content: space-around;
+      flex-direction: column;
+      margin-left: 3vw;
+      .how-it-works-btn-element {
+        background-color: #e9e5e5;
+        box-shadow: 0px 6px 12px #c4c4c4;
+        display: flex;
+        justify-content: flex-start;
+        width: 74vw;
+        padding: 0;
+        transform: scale(1);
+        justify-content: center;
+        column-gap: 2vw;
+      }
+    }
   }
 }
 
@@ -468,6 +531,7 @@ button {
 
   #home-logo {
     text-align: center;
+    box-shadow: unset;
     img {
       width: 50vw;
       padding-bottom: 2px;
@@ -555,6 +619,7 @@ button {
   #explore-restaurant {
     text-align: center;
     padding-right: 0px;
+    border-right: none;
   }
 
   .explore-restaurant-container {
@@ -594,6 +659,10 @@ button {
     box-shadow: $back-shadow;
     a {
       @include a-transform;
+      transform: scale(1);
+    }
+    &:hover {
+      transform: scale(1.02);
     }
   }
 
@@ -608,7 +677,6 @@ button {
     @include flex-mobile;
     align-items: flex-start;
     width: 95%;
-    margin-left: 15px;
     h2 {
       font-family: $font-txt;
       font-weight: 700;
@@ -628,6 +696,7 @@ button {
     color: $colour-light;
     @include pastille;
     background-color: $colour-dot;
+    z-index: 1;
   }
 
   .how-it-works-element {
@@ -639,10 +708,19 @@ button {
   .how-it-works-btn-element {
     background-color: $colour-block-one;
     box-shadow: $back-shadow;
-    :hover {
-      background-color: #9256dc0e;
-      box-shadow: $back-shadow;
-      color: $colour-dot;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    padding: 0;
+    transform: scale(1);
+    &:hover {
+      @include hover-btn;
+    }
+    &:hover > * {
+      color: black;
+      i {
+        color: $colour-dot;
+      }
     }
   }
 
@@ -657,9 +735,6 @@ button {
     i {
       color: gray;
       padding-left: 10px;
-      :hover {
-        color: $colour-dot;
-      }
     }
   }
 
@@ -686,8 +761,8 @@ button {
     border-radius: 2%;
     gap: 34px;
     margin-top: 38px;
-    width: 95%;
-    margin-left: 15px;
+    width: 90%;
+    margin-left: 8vw;
     margin-bottom: 35px;
   }
 
@@ -713,6 +788,9 @@ button {
     padding: 3px;
     box-shadow: $back-shadow;
     width: 93%;
+    &:hover {
+      @include hover-btn;
+    }
     &---image-container {
       height: 113px;
       overflow: hidden;
@@ -751,26 +829,5 @@ button {
   button {
     border: none;
     background: none;
-  }
-
-  .like i.fas.fa-heart {
-    font-size: 20px;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: black;
-    -webkit-background-clip: text;
-    color: transparent;
-    &:hover {
-      background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem);
-      -webkit-text-stroke-color: -webkit-linear-gradient(
-        bottom,
-        #ff79da,
-        #9356dc 1rem
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-stroke: unset;
-      cursor: pointer;
-    }
   }
 }
