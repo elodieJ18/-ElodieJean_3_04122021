@@ -254,6 +254,10 @@
     color: $colour-light;
     font-size: 15px;
   }
+  &:hover {
+    background: linear-gradient(180deg, #ff79da, #9356dc, #9356dc);
+    box-shadow: $back-shadow-hover;
+  }
 }
 
 @media (max-width: 720px) {

@@ -7,28 +7,13 @@ difficulté:
 -sass installation + soucis @importe (compatibilité)
 -coeur + switch de couleur
 -flu animation Ease
+-background-clip: text
+ .une autre façon d'utiliser: background-size (transition: background-size)
+ .les webkit
+-::After + ::Before (trop compliqué pour le coeur parce qu'il fallait trouver une image png avec un contour blanc)
 
 
 
 
-.bloc-logo-content img {
-  width: 70%;
-}
 
-
-.liens-anim {
-  text-decoration: none;
-  background: linear-gradient(
-      to top,
-      #d4766e 0%,
-      #d4766e 5% 1px,
-      transparent 5.01%
-    )
-    no-repeat left bottom / 0 100%;
-  transition: background-size 0.5s;
-}
-
-.liens-anim:hover {
-  background-size: 100% 100%;
-}
 

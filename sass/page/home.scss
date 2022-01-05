@@ -189,7 +189,7 @@ input {
     color: $colour-dot;
   }
   &:hover {
-    transform: scale(1.02);
+    background: linear-gradient(180deg, #ff79da, #9356dc, #9356dc);
     box-shadow: $back-shadow-hover;
   }
 }
@@ -254,9 +254,7 @@ input {
   justify-content: space-evenly;
   width: 20vw;
   padding: 0;
-  transform: scale(1);
   &:hover {
-    transform: scale(1.02);
     box-shadow: $back-shadow-hover;
   }
   &:hover > * {
@@ -356,9 +354,7 @@ input {
   padding: 3px;
   box-shadow: $back-shadow;
   width: 99%;
-  &:hover {
-    @include hover-btn;
-  }
+
   &---image-container {
     height: 206px;
     overflow: hidden;
@@ -443,7 +439,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 95%;
     margin-left: 8vw;
     .how-it-works-element {
       display: flex;
@@ -459,7 +454,6 @@ button {
         justify-content: flex-start;
         width: 74vw;
         padding: 0;
-        transform: scale(1);
         justify-content: center;
         column-gap: 2vw;
       }
@@ -659,10 +653,6 @@ button {
     box-shadow: $back-shadow;
     a {
       @include a-transform;
-      transform: scale(1);
-    }
-    &:hover {
-      transform: scale(1.02);
     }
   }
 
@@ -676,7 +666,6 @@ button {
   .how-it-works-content {
     @include flex-mobile;
     align-items: flex-start;
-    width: 95%;
     h2 {
       font-family: $font-txt;
       font-weight: 700;
@@ -712,10 +701,6 @@ button {
     justify-content: space-evenly;
     width: auto;
     padding: 0;
-    transform: scale(1);
-    &:hover {
-      @include hover-btn;
-    }
     &:hover > * {
       color: black;
       i {
@@ -788,9 +773,6 @@ button {
     padding: 3px;
     box-shadow: $back-shadow;
     width: 93%;
-    &:hover {
-      @include hover-btn;
-    }
     &---image-container {
       height: 113px;
       overflow: hidden;

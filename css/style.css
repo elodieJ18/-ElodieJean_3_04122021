@@ -191,7 +191,7 @@ a .btn-explore-restaurant:hover {
   color: #9356dc;
 }
 .btn-explore-restaurant:hover {
-  transform: scale(1.02);
+  background: linear-gradient(180deg, #ff79da, #9356dc, #9356dc);
   box-shadow: 0px 6px 12px #aaa6a6;
 }
 
@@ -267,10 +267,8 @@ a .btn-explore-restaurant:hover {
   justify-content: space-evenly;
   width: 20vw;
   padding: 0;
-  transform: scale(1);
 }
 .how-it-works-btn-element:hover {
-  transform: scale(1.02);
   box-shadow: 0px 6px 12px #aaa6a6;
 }
 .how-it-works-btn-element:hover > * {
@@ -380,10 +378,6 @@ a .btn-explore-restaurant:hover {
   box-shadow: 0px 6px 12px #c4c4c4;
   width: 99%;
 }
-.restaurants-choices-container-results-grid--element:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 6px 12px #aaa6a6;
-}
 .restaurants-choices-container-results-grid--element---image-container {
   height: 206px;
   overflow: hidden;
@@ -460,7 +454,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 95%;
     margin-left: 8vw;
   }
   .how-it-works-content .how-it-works-element {
@@ -478,7 +471,6 @@ button {
     justify-content: flex-start;
     width: 74vw;
     padding: 0;
-    transform: scale(1);
     justify-content: center;
     column-gap: 2vw;
   }
@@ -683,10 +675,6 @@ button {
   .btn-explore-restaurant a {
     text-decoration: none;
     color: #ffff;
-    transform: scale(1);
-  }
-  .btn-explore-restaurant:hover {
-    transform: scale(1.02);
   }
 
   /*fonctionnements*/
@@ -699,7 +687,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 95%;
   }
   .how-it-works-content h2 {
     font-family: "Roboto", sans-serif;
@@ -743,11 +730,6 @@ button {
     justify-content: space-evenly;
     width: auto;
     padding: 0;
-    transform: scale(1);
-  }
-  .how-it-works-btn-element:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 6px 12px #aaa6a6;
   }
   .how-it-works-btn-element:hover > * {
     color: black;
@@ -829,10 +811,6 @@ button {
     padding: 3px;
     box-shadow: 0px 6px 12px #c4c4c4;
     width: 93%;
-  }
-  .restaurants-choices-container-results-grid--element:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 6px 12px #aaa6a6;
   }
   .restaurants-choices-container-results-grid--element---image-container {
     height: 113px;
@@ -1135,6 +1113,10 @@ button {
   text-decoration: none;
   color: #ffff;
   font-size: 15px;
+}
+.btn-commander:hover {
+  background: linear-gradient(180deg, #ff79da, #9356dc, #9356dc);
+  box-shadow: 0px 6px 12px #aaa6a6;
 }
 
 @media (max-width: 720px) {
