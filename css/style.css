@@ -870,8 +870,7 @@ button {
 }
 
 #menu-française {
-  background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  background-color: #e9e5e5;
+  background-image: url("../../ElodieJean_3_04122021/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -879,7 +878,7 @@ button {
 }
 
 #enchantee {
-  background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../../ElodieJean_3_04122021/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -887,7 +886,7 @@ button {
 }
 
 #palette_gout {
-  background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../../ElodieJean_3_04122021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -895,7 +894,7 @@ button {
 }
 
 #delice_sens {
-  background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../../ElodieJean_3_04122021/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -1140,7 +1139,6 @@ button {
   }
 
   #menu-française {
-    background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: unset;
@@ -1148,7 +1146,6 @@ button {
   }
 
   #enchantee {
-    background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: unset;
@@ -1156,7 +1153,6 @@ button {
   }
 
   #palette_gout {
-    background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: unset;
@@ -1164,8 +1160,6 @@ button {
   }
 
   #delice_sens {
-    background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-    background-repeat: no-repeat;
     background-size: contain;
     background-position: unset;
     padding-top: 55%;
