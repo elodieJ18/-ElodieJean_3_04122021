@@ -418,7 +418,14 @@ button {
 
 .like i.fas.fa-heart {
   font-size: 20px;
-  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem, #9356dc 1rem, transparent, transparent);
+  background: -webkit-linear-gradient(
+    bottom,
+    #ff79da,
+    #9356dc 1rem,
+    #9356dc 1rem,
+    transparent,
+    transparent
+  );
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
   -webkit-background-size: 58px;
@@ -842,7 +849,7 @@ button {
     padding: 10px 10px 10px 10px;
   }
   .restaurants-choices-container-results-way h4,
-.restaurants-choices-container-results-way p {
+  .restaurants-choices-container-results-way p {
     margin: 0;
   }
 
@@ -1489,7 +1496,7 @@ button {
   }
 
   .footer-menu a,
-.footer-mention {
+  .footer-mention {
     color: #ffff;
   }
 }
