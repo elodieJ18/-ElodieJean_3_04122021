@@ -197,7 +197,7 @@ input {
     color: $colour-dot;
   }
   &:hover {
-    background: linear-gradient(180deg, #ff79da, #9356dc, #9356dc);
+    background: linear-gradient(180deg, #ff79da, #9256dcd0);
     box-shadow: $back-shadow-hover;
   }
 }
