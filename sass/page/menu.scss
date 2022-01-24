@@ -93,14 +93,14 @@
 
 .menu-element h2 {
   text-transform: capitalize;
-}
-
-.menu-element h3 {
   font-weight: 100;
   color: gray;
   margin: 0;
   text-transform: uppercase;
   font-size: 14px;
+  border-bottom: 3.3px solid $colour-ticket-new;
+  padding-bottom: 5px;
+  width: 35px;
 }
 
 .menu-title {
@@ -224,7 +224,7 @@
 /*fin-animation*/
 .menu-title-text {
   @include flex-mobile;
-  h4 {
+  h3 {
     margin: 0;
     font-size: 13px;
     padding: 10px;
@@ -341,14 +341,14 @@
 
   .menu-element h2 {
     text-transform: capitalize;
-  }
-
-  .menu-element h3 {
     font-weight: 100;
-    color: gray;
+    color: rgb(109, 108, 108);
     margin: 0;
     text-transform: uppercase;
     font-size: 14px;
+    border-bottom: 3.3px solid $colour-ticket-new;
+    padding-bottom: 5px;
+    width: 35px;
   }
 
   .menu-title {
@@ -469,7 +469,7 @@
   /*fin-animation*/
   .menu-title-text {
     @include flex-mobile;
-    h4 {
+    h3 {
       margin: 0;
       font-size: 13px;
       padding: 10px;
@@ -487,7 +487,7 @@
 
   .fond-ecran-menu {
     background-color: #e9e5e5;
-    padding-bottom: 6vh;
+    padding-bottom: 0vh;
     display: flex;
     flex-direction: column;
     align-items: center;

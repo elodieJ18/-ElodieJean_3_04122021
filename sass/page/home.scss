@@ -56,8 +56,13 @@ a {
   text-decoration: none;
 }
 
-h2 {
+.title-cursive {
   font-family: "Shrikhand", cursive;
+}
+
+.fa-arrow-left {
+  color: black;
+  padding-top: 14px;
 }
 
 /*header*/
@@ -184,6 +189,7 @@ input {
   display: block;
   margin-top: 5vw;
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .btn-explore-restaurant {
@@ -263,6 +269,7 @@ input {
   padding: 0;
   &:hover {
     box-shadow: $back-shadow-hover;
+    background-color: #9256dc28;
   }
   &:hover > * {
     color: black;
@@ -331,12 +338,16 @@ input {
 #restaurants-choices {
   display: grid;
   grid-template-columns: 1fr;
-  border-radius: 2%;
   gap: 34px;
   margin-top: 38px;
+  padding-bottom: 15vh;
+  background-color: #e9e5e5;
+}
+
+.restaurants-choices-container {
+  padding-top: 20px;
   width: 94vw;
-  margin-left: 3vw;
-  margin-bottom: 15vh;
+  padding-left: 3vw;
 }
 
 .restaurants-choices-container-results-grid--element---description {
@@ -430,8 +441,8 @@ button {
 @media (max-width: 1024px) {
   #explore-restaurant {
     border-right: solid 2px #9356dc;
-    margin-top: 28px;
-    margin-bottom: 22px;
+    padding-top: 28px;
+    padding-bottom: 22px;
     padding-right: 12px;
   }
 
@@ -463,6 +474,10 @@ button {
         padding: 0;
         justify-content: center;
         column-gap: 2vw;
+        &:hover {
+          box-shadow: $back-shadow-hover;
+          background-color: #9256dc28;
+        }
       }
     }
   }
@@ -524,7 +539,7 @@ button {
     text-decoration: none;
   }
 
-  h2 {
+  .title-cursive {
     font-family: "Shrikhand", cursive;
   }
 
@@ -625,6 +640,8 @@ button {
     text-align: center;
     padding-right: 0px;
     border-right: none;
+    background-color: #e9e5e5;
+    margin: 0;
   }
 
   .explore-restaurant-container {
@@ -638,8 +655,10 @@ button {
       font-family: $font-txt;
       font-weight: 100;
       font-size: 15px;
+      margin-top: 0;
       margin-bottom: 15px;
       color: grey;
+      width: 80vw;
     }
   }
 
@@ -712,6 +731,10 @@ button {
     justify-content: space-evenly;
     width: auto;
     padding: 0;
+    &:hover {
+      box-shadow: $back-shadow-hover;
+      background-color: #9256dc28;
+    }
     &:hover > * {
       color: black;
       i {
@@ -754,12 +777,17 @@ button {
   #restaurants-choices {
     display: grid;
     grid-template-columns: 1fr;
-    border-radius: 2%;
     gap: 34px;
     margin-top: 38px;
+    width: 100%;
+    padding-bottom: 35px;
+    background-color: #e9e5e5;
+  }
+
+  .restaurants-choices-container {
+    padding-top: 20px;
     width: 90%;
-    margin-left: 8vw;
-    margin-bottom: 35px;
+    padding-left: 8vw;
   }
 
   .restaurants-choices-container-results-grid--element---description {

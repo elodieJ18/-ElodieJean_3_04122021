@@ -52,8 +52,13 @@ a {
   text-decoration: none;
 }
 
-h2 {
+.title-cursive {
   font-family: "Shrikhand", cursive;
+}
+
+.fa-arrow-left {
+  color: black;
+  padding-top: 14px;
 }
 
 /*header*/
@@ -182,6 +187,7 @@ input :active {
   display: block;
   margin-top: 5vw;
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .btn-explore-restaurant {
@@ -277,6 +283,7 @@ a .btn-explore-restaurant:hover {
 }
 .how-it-works-btn-element:hover {
   box-shadow: 0px 6px 12px #aaa6a6;
+  background-color: #9256dc28;
 }
 .how-it-works-btn-element:hover > * {
   color: black;
@@ -354,12 +361,16 @@ a .btn-explore-restaurant:hover {
 #restaurants-choices {
   display: grid;
   grid-template-columns: 1fr;
-  border-radius: 2%;
   gap: 34px;
   margin-top: 38px;
+  padding-bottom: 15vh;
+  background-color: #e9e5e5;
+}
+
+.restaurants-choices-container {
+  padding-top: 20px;
   width: 94vw;
-  margin-left: 3vw;
-  margin-bottom: 15vh;
+  padding-left: 3vw;
 }
 
 .restaurants-choices-container-results-grid--element---description {
@@ -425,14 +436,7 @@ button {
 
 .like i.fas.fa-heart {
   font-size: 20px;
-  background: -webkit-linear-gradient(
-    bottom,
-    #ff79da,
-    #9356dc 1rem,
-    #9356dc 1rem,
-    transparent,
-    transparent
-  );
+  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem, #9356dc 1rem, transparent, transparent);
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
   -webkit-background-size: 58px;
@@ -452,8 +456,8 @@ button {
 @media (max-width: 1024px) {
   #explore-restaurant {
     border-right: solid 2px #9356dc;
-    margin-top: 28px;
-    margin-bottom: 22px;
+    padding-top: 28px;
+    padding-bottom: 22px;
     padding-right: 12px;
   }
 
@@ -487,6 +491,10 @@ button {
     padding: 0;
     justify-content: center;
     column-gap: 2vw;
+  }
+  .how-it-works-content .how-it-works-element .how-it-works-btn-element:hover {
+    box-shadow: 0px 6px 12px #aaa6a6;
+    background-color: #9256dc28;
   }
 }
 @media (max-width: 720px) {
@@ -543,7 +551,7 @@ button {
     text-decoration: none;
   }
 
-  h2 {
+  .title-cursive {
     font-family: "Shrikhand", cursive;
   }
 
@@ -640,6 +648,8 @@ button {
     text-align: center;
     padding-right: 0px;
     border-right: none;
+    background-color: #e9e5e5;
+    margin: 0;
   }
 
   .explore-restaurant-container {
@@ -660,8 +670,10 @@ button {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     font-size: 15px;
+    margin-top: 0;
     margin-bottom: 15px;
     color: grey;
+    width: 80vw;
   }
 
   .btn-explore-restaurant {
@@ -749,6 +761,10 @@ button {
     width: auto;
     padding: 0;
   }
+  .how-it-works-btn-element:hover {
+    box-shadow: 0px 6px 12px #aaa6a6;
+    background-color: #9256dc28;
+  }
   .how-it-works-btn-element:hover > * {
     color: black;
   }
@@ -799,12 +815,17 @@ button {
   #restaurants-choices {
     display: grid;
     grid-template-columns: 1fr;
-    border-radius: 2%;
     gap: 34px;
     margin-top: 38px;
+    width: 100%;
+    padding-bottom: 35px;
+    background-color: #e9e5e5;
+  }
+
+  .restaurants-choices-container {
+    padding-top: 20px;
     width: 90%;
-    margin-left: 8vw;
-    margin-bottom: 35px;
+    padding-left: 8vw;
   }
 
   .restaurants-choices-container-results-grid--element---description {
@@ -860,7 +881,7 @@ button {
     padding: 10px 10px 10px 10px;
   }
   .restaurants-choices-container-results-way h4,
-  .restaurants-choices-container-results-way p {
+.restaurants-choices-container-results-way p {
     margin: 0;
   }
 
@@ -967,14 +988,14 @@ button {
 
 .menu-element h2 {
   text-transform: capitalize;
-}
-
-.menu-element h3 {
   font-weight: 100;
   color: gray;
   margin: 0;
   text-transform: uppercase;
   font-size: 14px;
+  border-bottom: 3.3px solid #99e2d0;
+  padding-bottom: 5px;
+  width: 35px;
 }
 
 .menu-title {
@@ -1099,7 +1120,7 @@ button {
   display: flex;
   flex-direction: column;
 }
-.menu-title-text h4 {
+.menu-title-text h3 {
   margin: 0;
   font-size: 13px;
   padding: 10px;
@@ -1220,14 +1241,14 @@ button {
 
   .menu-element h2 {
     text-transform: capitalize;
-  }
-
-  .menu-element h3 {
     font-weight: 100;
-    color: gray;
+    color: #6d6c6c;
     margin: 0;
     text-transform: uppercase;
     font-size: 14px;
+    border-bottom: 3.3px solid #99e2d0;
+    padding-bottom: 5px;
+    width: 35px;
   }
 
   .menu-title {
@@ -1348,7 +1369,7 @@ button {
     display: flex;
     flex-direction: column;
   }
-  .menu-title-text h4 {
+  .menu-title-text h3 {
     margin: 0;
     font-size: 13px;
     padding: 10px;
@@ -1365,7 +1386,7 @@ button {
 
   .fond-ecran-menu {
     background-color: #e9e5e5;
-    padding-bottom: 6vh;
+    padding-bottom: 0vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1500,7 +1521,7 @@ footer {
   }
 
   .footer-menu a,
-  .footer-mention {
+.footer-mention {
     color: #ffff;
   }
 }
