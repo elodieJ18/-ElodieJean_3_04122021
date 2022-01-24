@@ -187,6 +187,13 @@ input {
   }
 }
 
+#explore-restaurant h2 {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin-top: 5vw;
+  text-align: center;
+}
+
 .btn-explore-restaurant {
   background: $colour-mixed;
   box-shadow: $back-shadow;
@@ -530,11 +537,7 @@ button {
   }
 
   #explore-restaurant h2 {
-    font-family: "Roboto", sans-serif;
-    display: block;
-    margin-top: 5vw;
     width: 80vw;
-    text-align: center;
   }
 
   /*header*/
