@@ -177,6 +177,13 @@ input :active {
   color: grey;
 }
 
+#explore-restaurant h2 {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin-top: 5vw;
+  text-align: center;
+}
+
 .btn-explore-restaurant {
   background: linear-gradient(180deg, #ff79da, #9356dc);
   box-shadow: 0px 6px 12px #c4c4c4;
@@ -191,7 +198,7 @@ a .btn-explore-restaurant:hover {
   color: #9356dc;
 }
 .btn-explore-restaurant:hover {
-  background: linear-gradient(180deg, #ff79da, #9356dc, #9356dc);
+  background: linear-gradient(180deg, #ff79da, #9256dcd0);
   box-shadow: 0px 6px 12px #aaa6a6;
 }
 
@@ -418,7 +425,14 @@ button {
 
 .like i.fas.fa-heart {
   font-size: 20px;
-  background: -webkit-linear-gradient(bottom, #ff79da, #9356dc 1rem, #9356dc 1rem, transparent, transparent);
+  background: -webkit-linear-gradient(
+    bottom,
+    #ff79da,
+    #9356dc 1rem,
+    #9356dc 1rem,
+    transparent,
+    transparent
+  );
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: black;
   -webkit-background-size: 58px;
@@ -531,6 +545,10 @@ button {
 
   h2 {
     font-family: "Shrikhand", cursive;
+  }
+
+  #explore-restaurant h2 {
+    width: 80vw;
   }
 
   /*header*/
@@ -842,7 +860,7 @@ button {
     padding: 10px 10px 10px 10px;
   }
   .restaurants-choices-container-results-way h4,
-.restaurants-choices-container-results-way p {
+  .restaurants-choices-container-results-way p {
     margin: 0;
   }
 
@@ -1365,7 +1383,7 @@ button {
     font-size: 15px;
   }
 }
-#footer {
+footer {
   background-color: #2e2e2e;
 }
 
@@ -1430,7 +1448,7 @@ button {
 }
 
 @media (max-width: 720px) {
-  #footer {
+  footer {
     background-color: #2e2e2e;
   }
 
@@ -1482,7 +1500,7 @@ button {
   }
 
   .footer-menu a,
-.footer-mention {
+  .footer-mention {
     color: #ffff;
   }
 }
